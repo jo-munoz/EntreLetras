@@ -1,0 +1,638 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FA40E36-9623-4BEB-85D5-309F0C91F83F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuegoDidactico.Web</RootNamespace>
+    <AssemblyName>JuegoDidactico.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Admin.png" />
+    <Content Include="Images\avatar_child_1.png" />
+    <Content Include="Images\avatar_child_2.png" />
+    <Content Include="Images\avatar_child_3.png" />
+    <Content Include="Images\avatar_child_4.png" />
+    <Content Include="Images\avatar_girl_1.png" />
+    <Content Include="Images\avatar_girl_2.png" />
+    <Content Include="Images\avatar_girl_3.png" />
+    <Content Include="Images\avatar_girl_4.png" />
+    <Content Include="Images\five.png" />
+    <Content Include="Images\four.png" />
+    <Content Include="Images\libro.png" />
+    <Content Include="Images\locked.png" />
+    <Content Include="Images\matematicas.jpg" />
+    <Content Include="Images\one.png" />
+    <Content Include="Images\Pagaro1.jpg" />
+    <Content Include="Images\Pagaro2.jpg" />
+    <Content Include="Images\Pagaro3.jpg" />
+    <Content Include="Images\Palma1.jpg" />
+    <Content Include="Images\Palma2.jpg" />
+    <Content Include="Images\Palma3.jpg" />
+    <Content Include="Images\portada.jpg" />
+    <Content Include="Images\subtraction.png" />
+    <Content Include="Images\sum.png" />
+    <Content Include="Images\three.png" />
+    <Content Include="Images\two.png" />
+    <Content Include="Images\unlocked.png" />
+    <Content Include="Images\word.png" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Scripts\alertify.js\grunt.js" />
+    <Content Include="Scripts\alertify.js\lib\alertify.js" />
+    <Content Include="Scripts\alertify.js\themes\alertify.core.css" />
+    <Content Include="Scripts\alertify.js\themes\alertify.default.css" />
+    <Content Include="Scripts\css\animation.css" />
+    <Content Include="Scripts\css\bootstrap-grid.css" />
+    <Content Include="Scripts\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\css\bootstrap.css" />
+    <Content Include="Scripts\css\bootstrap.min.css" />
+    <Content Include="Scripts\css\fontello-codes.css" />
+    <Content Include="Scripts\css\fontello-embedded.css" />
+    <Content Include="Scripts\css\fontello-ie7-codes.css" />
+    <Content Include="Scripts\css\fontello-ie7.css" />
+    <Content Include="Scripts\css\fontello.css" />
+    <Content Include="Scripts\filtro\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\filtro\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\filtro\jquery.quicksearch.js" />
+    <Content Include="Scripts\font\fontello.eot" />
+    <Content Include="Scripts\font\fontello.svg" />
+    <Content Include="Scripts\font\fontello.woff" />
+    <Content Include="Scripts\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\js\jquery.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.gitignore" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper-utils.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper-utils.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper-utils.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper-utils.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper-utils.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper-utils.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\code.css" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\font-awesome.min.css" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\images\arrow.svg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\images\bars.svg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\images\close.svg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\popper.css" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\documentation.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\favicon-16x16.png" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\favicon-32x32.png" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\favicon-96x96.png" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\favicon.ico" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\feed.xml" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\banner.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\banner.png" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\logo.png" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\pic01.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\pic02.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\pic03.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\pic04.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\images\pic05.jpg" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\index.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\ie\backgroundsize.min.htc" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\ie\html5shiv.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\ie\respond.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\jquery.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\jquery.nanoscroller.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\jquery.scrollex.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\jquery.scrolly.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\main.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\skel.min.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\js\util.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\LICENSE.txt" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\popper-documentation.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\README.txt" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\tooltip-documentation.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\tooltip-examples.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example10-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example10.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example10t-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example10t.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example20-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example20.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example20t-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example20t.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example30-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example30.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example40-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example40.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example50-code.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\example50.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\footer.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\head.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\header.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\scripts.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_layouts\default.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_layouts\landing.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_layouts\page-hashtag.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_layouts\page-nowrap.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_layouts\page.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\babel-config\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\bundle\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\eslint-config-popper\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\.eslintrc.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\bundle.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\defaults.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\destroy.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\placements.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\methods\update.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\arrow.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\flip.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\hide.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\inner.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\offset.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\modifiers\shift.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\clockwise.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\debounce.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\find.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\findIndex.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getClientRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getParentNode.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getRoot.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getScroll.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\includeScroll.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isFixed.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isFunction.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isIE10.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isNative.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isNumeric.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\runModifiers.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\setAttributes.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\setStyles.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\.eslintrc.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\arrow.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\core.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\flips.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\lifecycle.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\offset.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\functional\rendering.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\styles\test.css" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\clockwise.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\debounce.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\find.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\findIndex.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getClientRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getOffsetParent.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getOppositePlacement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getOppositeVariation.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getParentNode.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getScrollParent.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\getStyleComputedProperty.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\isFixed.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\isNative.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\unit\parseOffset.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\utils\getRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\utils\makePopperFactory.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\visual\flipWithoutPreventOverflow.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\visual\test.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\tests\visual\tooltip.html" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\setup.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\appendNewPopper.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\appendNewRef.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\customEventPolyfill.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\getRect.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\isMSBrowser.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\makeConnectedElement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\makeConnectedScrollElement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\makeElement.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\prepend.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\simulateScroll.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\utils\then.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test\.babelrc.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test\bin\karma.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test\karma.conf.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\.eslintrc.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\bundle.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\src\index.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\tests\functional\tooltip.js" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\popperjs.png" />
+    <Content Include="Scripts\js\popper.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForms\Modules\Admin\frmCreateUser.aspx" />
+    <Content Include="WebForms\Modules\Admin\frmRecord.aspx" />
+    <Content Include="WebForms\Modules\Children\frmSelectAvatar.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\frmSelectLevel.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\Level1\frmMathLevel1.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\Level2\frmMathLevel2.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\Level3\frmMathLevel3.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\Level4\frmMathLevel4.aspx" />
+    <Content Include="WebForms\Modules\Children\Math\Level5\frmMathLevel5.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\frmSelectLevel.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question1.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question2.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question1.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question2.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question1.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question2.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question1.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question2.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question1.aspx" />
+    <Content Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Children.Master.cs">
+      <DependentUpon>Children.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Children.Master.designer.cs">
+      <DependentUpon>Children.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForms\Modules\Admin\frmCreateUser.aspx.cs">
+      <DependentUpon>frmCreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Admin\frmCreateUser.aspx.designer.cs">
+      <DependentUpon>frmCreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Admin\frmRecord.aspx.cs">
+      <DependentUpon>frmRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Admin\frmRecord.aspx.designer.cs">
+      <DependentUpon>frmRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\frmSelectAvatar.aspx.cs">
+      <DependentUpon>frmSelectAvatar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\frmSelectAvatar.aspx.designer.cs">
+      <DependentUpon>frmSelectAvatar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\frmSelectLevel.aspx.cs">
+      <DependentUpon>frmSelectLevel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\frmSelectLevel.aspx.designer.cs">
+      <DependentUpon>frmSelectLevel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level1\frmMathLevel1.aspx.cs">
+      <DependentUpon>frmMathLevel1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level1\frmMathLevel1.aspx.designer.cs">
+      <DependentUpon>frmMathLevel1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level2\frmMathLevel2.aspx.cs">
+      <DependentUpon>frmMathLevel2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level2\frmMathLevel2.aspx.designer.cs">
+      <DependentUpon>frmMathLevel2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level3\frmMathLevel3.aspx.cs">
+      <DependentUpon>frmMathLevel3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level3\frmMathLevel3.aspx.designer.cs">
+      <DependentUpon>frmMathLevel3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level4\frmMathLevel4.aspx.cs">
+      <DependentUpon>frmMathLevel4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level4\frmMathLevel4.aspx.designer.cs">
+      <DependentUpon>frmMathLevel4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level5\frmMathLevel5.aspx.cs">
+      <DependentUpon>frmMathLevel5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Math\Level5\frmMathLevel5.aspx.designer.cs">
+      <DependentUpon>frmMathLevel5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\frmSelectLevel.aspx.cs">
+      <DependentUpon>frmSelectLevel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\frmSelectLevel.aspx.designer.cs">
+      <DependentUpon>frmSelectLevel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question1.aspx.cs">
+      <DependentUpon>frmSpanishLevel1Question1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question1.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel1Question1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question2.aspx.cs">
+      <DependentUpon>frmSpanishLevel1Question2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level1\frmSpanishLevel1Question2.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel1Question2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question1.aspx.cs">
+      <DependentUpon>frmSpanishLevel2Question1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question1.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel2Question1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question2.aspx.cs">
+      <DependentUpon>frmSpanishLevel2Question2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level2\frmSpanishLevel2Question2.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel2Question2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question1.aspx.cs">
+      <DependentUpon>frmSpanishLevel3Question1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question1.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel3Question1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question2.aspx.cs">
+      <DependentUpon>frmSpanishLevel3Question2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level3\frmSpanishLevel3Question2.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel3Question2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question1.aspx.cs">
+      <DependentUpon>frmSpanishLevel4Question1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question1.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel4Question1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question2.aspx.cs">
+      <DependentUpon>frmSpanishLevel4Question2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level4\frmSpanishLevel4Question2.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel4Question2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question1.aspx.cs">
+      <DependentUpon>frmSpanishLevel5Question1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question1.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel5Question1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question2.aspx.cs">
+      <DependentUpon>frmSpanishLevel5Question2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Modules\Children\Spanish\Level5\frmSpanishLevel5Question2.aspx.designer.cs">
+      <DependentUpon>frmSpanishLevel5Question2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\Children.Master" />
+    <Content Include="FileWord\test.docx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\css\bootstrap.css.map" />
+    <Content Include="Scripts\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\js\bootstrap.js.map" />
+    <Content Include="Scripts\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.bithoundrc" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.codeclimate.yml" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.editorconfig" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.jsdoc" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\.travis.yml" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\bower.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\CHANGELOG.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\CODE_OF_CONDUCT.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\CONTRIBUTING.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper-utils.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\esm\popper.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper-utils.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\popper.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper-utils.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\dist\umd\popper.min.js.map" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\CNAME" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\ie8.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\ie9.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\css\main.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_config.yml" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\popper-documentation.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_includes\tooltip-documentation.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_sass\libs\_functions.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_sass\libs\_mixins.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_sass\libs\_skel.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\docs\_sass\libs\_vars.scss" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\lerna.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\LICENSE.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\MENTIONS.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\babel-config\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\babel-config\yarn.lock" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\bundle\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\bundle\yarn.lock" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\eslint-config-popper\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\eslint-config-popper\yarn.lock" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\.eslintignore" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\.npmignore" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\bower-publish.sh" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\bower.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test-utils\yarn.lock" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\test\README.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\.eslintignore" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\.npmignore" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\package.json" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\tests\.eslintrc" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\tooltip\yarn.lock" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\README.md" />
+    <Content Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\yarn.lock" />
+    <Content Include="Scripts\font\fontello.ttf" />
+    <Content Include="Scripts\font\fontello.woff2" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MasterPage\Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\js\popper.js-1.12.2\popper.js-1.12.2\packages\popper\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JuegoDidactico.Logica\JuegoDidactico.Logica.csproj">
+      <Project>{a5133e88-74df-4680-9bd5-abba2ea235d4}</Project>
+      <Name>JuegoDidactico.Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54249</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54249/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
